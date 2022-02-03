@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кондитерская у Карины</title>
+</head>
+<body>
+    <form action="https://karina-bakery.com/order.cgi" method="post" enctype="application/x-www-form-urlencoded">
+        <p><label>Ваше имя*: <input type="text" name="custname" required autocomplete="given-name"></label></p>
+        <p><label>Ваш номер телефона*: <input type="tel" name="custtel" required autocomplete="mobile"></label></p>
+        <p><label>Ваш e-mail: <input type="email" name="custemail" autocomplete="email"></label></p>
+        <fieldset>
+            <legend>Вес торта</legend>
+            <p><label><input type="radio" name="weight" required value="small"> до 1 кг</label></p>
+            <p><label><input type="radio" name="weight" required value="medium"> от 1 до 2 кг</label></p>
+            <p><label><input type="radio" name="weight" required value="large"> от 2 кг</label></p>
+        </fieldset>
+        <fieldset>
+            <legend>Покрытие торта</legend>
+            <p><label><input type="checkbox" name="topping" value="chocolate"> Шоколад</label></p>
+            <p><label><input type="checkbox" name="topping" value="fruit"> Фрукты</label></p>
+            <p><label><input type="checkbox" name="topping" value="gumpaste"> Мастика</label></p>
+            <p><label><input type="checkbox" name="topping" value="cream"> Крем</label></p>
+        </fieldset>
+        <p><select name="recepient" required>
+            <option disabled selected>Я заказываю торт</option>
+            <option value="for-myself">для себя</option>
+            <option value="not-for-myself">в подарок</option>
+        </select></p>
+        <p><label>Выберите время доставки: 
+            <input type="time" min="08:00" max="23:00" step="1800" name="delivery-time">
+        </label></p>
+        <p><label>
+            <textarea name="comments" maxlength="1000" placeholder="Ваши комментарии к заказу" rows="8" cols="33"></textarea>
+        </label></p>
+        <p><button>Сделать заказ</button></p>
+    </form>
+</body>
+</html>
